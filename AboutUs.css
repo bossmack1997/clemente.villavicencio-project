@@ -153,3 +153,21 @@
   left: 0;
   z-index: 100;
 }
+@media (max-width: 768px) {
+  .clemente-villavicencio-header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .clemente-villavicencio-ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .clemente-villavicencio-contact-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}

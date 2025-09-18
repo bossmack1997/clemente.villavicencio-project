@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 25px;
+  flex-wrap: nowrap;
 }
 
 .clemente-villavicencio-logo {
@@ -76,6 +77,7 @@
   cursor: pointer;
   font-size: 14px;
   transition: background 0.3s;
+  flex-wrap: nowrap;
 }
 
 .clemente-villavicencio-logout:hover {
@@ -86,13 +88,16 @@
   background: #fff;
   padding: 10px 0;
   border-bottom: 2px solid #000;
+   overflow-x: auto; /* allow horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
 }
 
 .clemente-villavicencio-ul {
   list-style: none;
-  display: flex;
+  display: flex; /* horizontal layout */
   justify-content: center;
   gap: 35px;
+  flex-wrap: nowrap; /* prevent wrapping */
 }
 
 .clemente-villavicencio-a {
@@ -293,8 +298,8 @@
   }
 
   .clemente-villavicencio-ul {
-    flex-direction: column;
-    gap: 15px;
+   flex-direction: row; /* keep horizontal */
+    gap: 20px;
   }
 
   .clemente-villavicencio-contact-grid {

@@ -247,7 +247,7 @@
   }
 
   .clemente-villavicencio-ul {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
   }
 

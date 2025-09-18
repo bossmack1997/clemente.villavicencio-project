@@ -184,11 +184,21 @@
 
 
 
-@media (max-width: 600px) {
-  .clemente-villavicencio-hero-content h2 {
-    font-size: 1.6rem;
+@media (max-width: 768px) {
+  .clemente-villavicencio-header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
   }
-  .clemente-villavicencio-hero-content p {
-    font-size: 0.9rem;
+
+  .clemente-villavicencio-ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .clemente-villavicencio-contact-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 }

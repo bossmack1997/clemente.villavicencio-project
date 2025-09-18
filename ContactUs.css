@@ -179,8 +179,8 @@
   }
 
   .clemente-villavicencio-ul {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    gap: 20px;
   }
 
   .clemente-villavicencio-contact-grid {
