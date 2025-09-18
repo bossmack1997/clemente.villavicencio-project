@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C’S Techno Shop - Products</title>
+  <link rel="stylesheet" href="Product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="clemente-villavicencio-body">
+
+
+  <header class="clemente-villavicencio-header">
+    <div class="clemente-villavicencio-logo">
+      <img src="img/WEBdev LOGO.png" alt="Logo" class="clemente-villavicencio-logo-img">
+      <h2 class="clemente-villavicencio-h2">C’S Techno Shop</h2>
+    </div>
+    <div class="clemente-villavicencio-search-box">
+      <i class="fas fa-search clemente-villavicencio-icon"></i>
+      <input type="text" placeholder="Search..." class="clemente-villavicencio-input">
+    </div>
+    <button onclick="logout()" class="clemente-villavicencio-logout">Logout</button>
+  </header>
+
+  <nav class="clemente-villavicencio-nav">
+    <ul class="clemente-villavicencio-ul">
+      <li class="clemente-villavicencio-li"><a href="Homepage.html" class="clemente-villavicencio-a">HOME</a></li>
+      <li class="clemente-villavicencio-li"><a href="AboutUs.html" class="clemente-villavicencio-a">ABOUT US</a></li>
+      <li class="clemente-villavicencio-li"><a href="Product.html" class="active clemente-villavicencio-a">PRODUCT</a></li>
+      <li class="clemente-villavicencio-li"><a href="ContactUs.html" class="clemente-villavicencio-a">CONTACT</a></li>
+      <li class="clemente-villavicencio-li"><a href="FAQ.html" class="clemente-villavicencio-a">FAQ</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="clemente-villavicencio-welcome">
+    <h2 class="clemente-villavicencio-h2">Welcome to C’S Techno</h2>
+    <div class="clemente-villavicencio-welcome-content">
+      <img src="img/laptop.jpg" alt="Laptop" class="clemente-villavicencio-img">
+      <div>
+        <p class="clemente-villavicencio-p">
+          Welcome to C'S Techno – your one-stop shop for high-quality laptops, keyboards, and mice. Whether you're a student, gamer, or professional, we offer the latest tech gear to keep you connected and productive. At C'S Techno, we combine reliable products with competitive prices and fast delivery, making it easier than ever to upgrade your setup. Explore our collection and power up your tech today!
+        </p>
+        <div class="clemente-villavicencio-buttons">
+          <button class="clemente-villavicencio-btn">Shop Now</button>
+          <button class="clemente-villavicencio-btn-outline">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="clemente-villavicencio-product-section">
+    <h2 class="clemente-villavicencio-h2">PRODUCTS</h2>
+    <div class="clemente-villavicencio-product-grid">
+      <div class="clemente-villavicencio-product-card">
+        <img src="img/mouse.jpg" alt="Mouse" class="clemente-villavicencio-img">
+        <h3 class="clemente-villavicencio-h3">Mouse</h3>
+        <h4 class="clemente-villavicencio-h4">₱800</h4>
+      </div>
+      <div class="clemente-villavicencio-product-card">
+        <img src="img/keyboard.jpg" alt="Keyboard" class="clemente-villavicencio-img">
+        <h3 class="clemente-villavicencio-h3">Keyboard</h3>
+        <h4 class="clemente-villavicencio-h4">₱1,000</h4>
+      </div>
+      <div class="clemente-villavicencio-product-card">
+        <img src="img/headset.jpg" alt="Monitor" class="clemente-villavicencio-img">
+        <h3 class="clemente-villavicencio-h3">Monitor</h3>
+        <h4 class="clemente-villavicencio-h4">₱2,500</h4>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="clemente-villavicencio-footer">
+    &copy; <span id="year"></span> C’S Techno Shop | All Rights Reserved
+  </footer>
+
+
+  <script>
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function logout() {
+      alert("✅ You have successfully logged out."); 
+      setTimeout(() => {
+        window.location.href = "SignUp.html"; 
+      }, 500); 
+    }
+  </script>
+
+</body>
+</html>

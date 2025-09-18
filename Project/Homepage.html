@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C’S Techno Shop - Home</title>
+  <link rel="stylesheet" href="Homepage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="clemente-villavicencio-body">
+
+
+  <header class="clemente-villavicencio-header">
+     <div class="clemente-villavicencio-logo">
+        <img src="img/WEBdev LOGO.png" alt="Logo" class="clemente-villavicencio-logo-img">
+        <h2 class="clemente-villavicencio-h2">C’S Techno Shop</h2>
+     </div>
+     <div class="clemente-villavicencio-search-box">
+        <i class="fas fa-search clemente-villavicencio-icon"></i>
+        <input type="text" placeholder="Search..." class="clemente-villavicencio-input">
+     </div>
+     <button onclick="logout()" class="clemente-villavicencio-logout">Logout</button>
+  </header>
+
+  <nav class="clemente-villavicencio-nav">
+    <ul class="clemente-villavicencio-ul">
+      <li class="clemente-villavicencio-li"><a href="Homepage.html" class="active clemente-villavicencio-a">HOME</a></li>
+      <li class="clemente-villavicencio-li"><a href="AboutUs.html" class="clemente-villavicencio-a">ABOUT US</a></li>
+      <li class="clemente-villavicencio-li"><a href="Product.html" class="clemente-villavicencio-a">PRODUCT</a></li>
+      <li class="clemente-villavicencio-li"><a href="ContactUs.html" class="clemente-villavicencio-a">CONTACT</a></li>
+      <li class="clemente-villavicencio-li"><a href="FAQ.html" class="clemente-villavicencio-a">FAQ</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="clemente-villavicencio-hero">
+    <div class="clemente-villavicencio-hero-content">
+      <h1 class="clemente-villavicencio-h1">Welcome to C’S Techno Shop</h1>
+      <p class="clemente-villavicencio-p">Your trusted partner for quality gadgets and accessories.</p>
+      <a href="Product.html" class="clemente-villavicencio-btn">Shop Now</a>
+    </div>
+  </section>
+
+
+  <section class="clemente-villavicencio-highlights">
+    <div class="clemente-villavicencio-highlight">
+      <h3 class="clemente-villavicencio-h3">💻 Quality Products</h3>
+      <p class="clemente-villavicencio-p">Top brands and latest gadgets available.</p>
+    </div>
+    <div class="clemente-villavicencio-highlight">
+      <h3 class="clemente-villavicencio-h3">⚡ Fast Delivery</h3>
+      <p class="clemente-villavicencio-p">Nationwide shipping with trusted couriers.</p>
+    </div>
+    <div class="clemente-villavicencio-highlight">
+      <h3 class="clemente-villavicencio-h3">🛠 Expert Support</h3>
+      <p class="clemente-villavicencio-p">Certified technicians for repair & upgrades.</p>
+    </div>
+  </section>
+
+   <section class="clemente-villavicencio-products">
+    <h2 class="clemente-villavicencio-h2">Featured Products</h2>
+    <div class="clemente-villavicencio-product-grid">
+      <div class="clemente-villavicencio-product">
+        <img src="img/laptop.jpg" alt="Laptop" class="clemente-villavicencio-img">
+        <h4 class="clemente-villavicencio-h4">Gaming Laptop</h4>
+        <p class="clemente-villavicencio-p">High performance laptop for gamers.</p>
+      </div>
+      <div class="clemente-villavicencio-product">
+        <img src="img/set1.jpg" alt="Desktop" class="clemente-villavicencio-img">
+        <h4 class="clemente-villavicencio-h4">Custom PC</h4>
+        <p class="clemente-villavicencio-p">Powerful desktop built for your needs.</p>
+      </div>
+      <div class="clemente-villavicencio-product">
+        <img src="img/mouse.jpg" alt="Gaming Mouse" class="clemente-villavicencio-img">
+        <h4 class="clemente-villavicencio-h4">Gaming Mouse</h4>
+        <p class="clemente-villavicencio-p">Precision and comfort for long sessions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="clemente-villavicencio-about-preview">
+    <h2 class="clemente-villavicencio-h2">About Us</h2>
+    <p class="clemente-villavicencio-p">
+      At C’S Techno Shop, we are dedicated to providing the latest gadgets, high-performance PCs, and excellent customer service. Whether you’re a gamer, student, or professional, we’ve got you covered.
+    </p>
+    <a href="AboutUs.html" class="clemente-villavicencio-btn">Learn More</a>
+  </section>
+
+  
+  <footer class="clemente-villavicencio-footer">
+    &copy; 2025 C’S Techno Shop | All Rights Reserved
+  </footer>
+
+ 
+  <script>
+    function logout() {
+      alert("✅ You have successfully logged out."); 
+      setTimeout(() => {
+        window.location.href = "SignUp.html"; 
+      }, 500); 
+    }
+  </script>
+
+</body>
+</html>

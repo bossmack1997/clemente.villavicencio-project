@@ -1,0 +1,305 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.clemente-villavicencio-body {
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+
+.clemente-villavicencio-header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 25px;
+}
+
+.clemente-villavicencio-logo {
+  display: flex;
+  align-items: center;
+}
+
+.clemente-villavicencio-logo-img {
+  width: 45px;
+  height: 45px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.clemente-villavicencio-h2 {
+  font-size: 22px;
+}
+
+
+.clemente-villavicencio-search-box {
+  background: #fff;
+  border-radius: 25px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.clemente-villavicencio-search-box input {
+  border: none;
+  outline: none;
+  padding: 6px;
+  font-size: 14px;
+}
+
+.clemente-villavicencio-search-box i {
+  color: #000;
+  margin-right: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+
+.clemente-villavicencio-logout {
+  margin-left: 20px;
+  padding: 8px 14px;
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.clemente-villavicencio-logout:hover {
+  background: #333;
+}
+
+.clemente-villavicencio-nav {
+  background: #fff;
+  padding: 10px 0;
+  border-bottom: 2px solid #000;
+}
+
+.clemente-villavicencio-ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.clemente-villavicencio-a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 5px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.clemente-villavicencio-a:hover {
+  color: #333;
+}
+
+.clemente-villavicencio-a.active {
+  border-bottom: 2px solid #000;
+}
+
+
+.clemente-villavicencio-hero {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #333;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e6e6e6 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.clemente-villavicencio-hero::before,
+.clemente-villavicencio-hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(200,200,200,0.2);
+  z-index: 0;
+}
+
+.clemente-villavicencio-hero::before {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+}
+
+.clemente-villavicencio-hero::after {
+  width: 300px;
+  height: 300px;
+  bottom: -80px;
+  right: -80px;
+}
+
+.clemente-villavicencio-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.clemente-villavicencio-h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.clemente-villavicencio-p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.clemente-villavicencio-btn {
+  background: #333;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.clemente-villavicencio-btn:hover {
+  background: #555;
+}
+
+@media (max-width: 480px) {
+  .clemente-villavicencio-h1 { font-size: 2rem; }
+  .clemente-villavicencio-p { font-size: 1rem; }
+}
+
+
+.clemente-villavicencio-highlights {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  flex-wrap: wrap;
+}
+
+.clemente-villavicencio-highlight {
+  flex: 1;
+  min-width: 220px;
+  margin: 15px;
+}
+
+.clemente-villavicencio-h3 {
+  margin-bottom: 12px;
+  color: #111;
+}
+
+
+.clemente-villavicencio-products {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.clemente-villavicencio-products .clemente-villavicencio-h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.clemente-villavicencio-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.clemente-villavicencio-product {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.clemente-villavicencio-product:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+}
+
+.clemente-villavicencio-product img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.clemente-villavicencio-h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.clemente-villavicencio-about-preview {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.clemente-villavicencio-about-preview .clemente-villavicencio-p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+}
+
+.clemente-villavicencio-about-preview .clemente-villavicencio-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.clemente-villavicencio-about-preview .clemente-villavicencio-btn:hover {
+  background: #333;
+}
+
+
+.clemente-villavicencio-footer {
+  background: #000;
+  color: #bbb;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .clemente-villavicencio-header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .clemente-villavicencio-ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .clemente-villavicencio-contact-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}

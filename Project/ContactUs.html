@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C’S Techno Shop - Contact</title>
+
+
+  <link rel="stylesheet" href="ContactUs.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="clemente-villavicencio-body">
+
+  <header class="clemente-villavicencio-header">
+    <div class="clemente-villavicencio-logo">
+      <img src="img/WEBdev LOGO.png" alt="Logo" class="clemente-villavicencio-logo-img" />
+      <h2 class="clemente-villavicencio-h2">C’S Techno Shop</h2>
+    </div>
+
+    <button class="clemente-villavicencio-logout" onclick="logout()">Log Out</button>
+  </header>
+
+
+  <nav class="clemente-villavicencio-nav">
+  
+    <ul class="clemente-villavicencio-ul">
+      <li><a href="Homepage.html" class="clemente-villavicencio-a">HOME</a></li>
+      <li><a href="AboutUs.html" class="clemente-villavicencio-a">ABOUT US</a></li>
+      <li><a href="Product.html" class="clemente-villavicencio-a">PRODUCT</a></li>
+      <li><a href="ContactUs.html" class="active clemente-villavicencio-a">CONTACT</a></li>
+      <li><a href="FAQ.html" class="clemente-villavicencio-a">FAQ</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="clemente-villavicencio-dev">
+    <h2>OUR DEVELOPERS</h2>
+
+    <div class="clemente-villavicencio-contact-grid">
+      <div class="clemente-villavicencio-contact-card">
+        <img src="img/cyron.jpg" alt="Cyron Villavicencio" />
+        <p><strong>Name:</strong> Cyron Villavicencio</p>
+        <p><strong>Yr/sec:</strong> BSIS - 3B</p>
+        <p><strong>Role:</strong> Front-End Developer</p>
+        <p><strong>Contact:</strong><br>cyronvillavicencio85@gmail.com<br>09289387132</p>
+      </div>
+
+      <div class="clemente-villavicencio-contact-card">
+        <img src="img/steven.jpg" alt="Mark Steven Clemente" />
+        <p><strong>Name:</strong> Mark Steven Clemente</p>
+        <p><strong>Yr/sec:</strong> BSIS - 3B</p>
+        <p><strong>Role:</strong> Back-End Developer</p>
+        <p><strong>Contact:</strong><br>jollitownfriends@gmail.com<br>09639958414</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="clemente-villavicencio-social">
+    <h3>Follow Us</h3>
+    <a href="https://www.facebook.com/profile.php?id=61580438786359"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/cstechnoo?igsh=eDJ4N2FyMG9wcThx"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/bossmack1997"><i class="fab fa-github"></i></a>
+  </section>
+
+  <footer class="clemente-villavicencio-footer">
+    &copy; 2025 C’S Techno Shop | All Rights Reserved
+  </footer>
+
+  <script>
+    function logout() {
+      alert("✅ You have successfully logged out.");
+      setTimeout(() => (window.location.href = "SignUp.html"), 500);
+    }
+  </script>
+</body>
+</html>

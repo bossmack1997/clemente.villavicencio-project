@@ -1,0 +1,96 @@
+  
+    body {
+      font-family: Arial, sans-serif;
+      background: grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .clemente-villavicencio-container {
+      background: #fff;
+      padding: 50px;
+      border: 3px zolid #222;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 360px;
+    }
+
+    .clemente-villavicencio-h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .clemente-villavicencio-form-group {
+      margin-bottom: 15px;
+    }
+
+    .clemente-villavicencio-label {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .clemente-villavicencio-input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .clemente-villavicencio-button {
+      width: 106%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .clemente-villavicencio-button:hover {
+      background: #005fa3;
+    }
+
+    .clemente-villavicencio-switch {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .clemente-villavicencio-switch a {
+      color: #0077cc;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .clemente-villavicencio-switch a:hover {
+      text-decoration: underline;
+    }
+
+    .clemente-villavicencio-message {
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: red;
+    }
+
+  .clemente-villavicencio-logo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.clemente-villavicencio-logo img {
+  width: 80px;   
+  height: auto;
+  border-radius: 50%;
+}

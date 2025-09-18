@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C’S Techno Shop - FAQ</title>
+  <link rel="stylesheet" href="FAQ.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="clemente-villavicencio-body">
+
+
+  <header class="clemente-villavicencio-header">
+    <div class="clemente-villavicencio-logo">
+      <img src="img/WEBdev LOGO.png" alt="Logo" class="clemente-villavicencio-logo-img">
+      <h2 class="clemente-villavicencio-h2">C’S Techno Shop</h2>
+    </div>
+    <button onclick="logout()" class="clemente-villavicencio-logout">Logout</button>
+  </header>
+
+ 
+  <nav class="clemente-villavicencio-nav">
+    <ul class="clemente-villavicencio-ul">
+      <li class="clemente-villavicencio-li"><a href="Homepage.html" class="clemente-villavicencio-a">HOME</a></li>
+      <li class="clemente-villavicencio-li"><a href="AboutUs.html" class="clemente-villavicencio-a">ABOUT US</a></li>
+      <li class="clemente-villavicencio-li"><a href="Product.html" class="clemente-villavicencio-a">PRODUCT</a></li>
+      <li class="clemente-villavicencio-li"><a href="ContactUs.html" class="clemente-villavicencio-a">CONTACT</a></li>
+      <li class="clemente-villavicencio-li"><a href="FAQ.html" class="active clemente-villavicencio-a">FAQ</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="clemente-villavicencio-faq">
+    <h2 class="clemente-villavicencio-h2">Frequently Asked Questions?</h2>
+    <div class="clemente-villavicencio-faq-container">
+
+      <div class="clemente-villavicencio-faq-item">
+        <div class="clemente-villavicencio-faq-question">1. What services do you offer?</div>
+        <div class="clemente-villavicencio-faq-answer">
+          <p>We provide computer sales, repairs, upgrades, networking services, and custom PC builds.  
+          We also sell accessories like keyboards, mice, and monitors.</p>
+        </div>
+      </div>
+
+      <div class="clemente-villavicencio-faq-item">
+        <div class="clemente-villavicencio-faq-question">2. What are your store hours?</div>
+        <div class="clemente-villavicencio-faq-answer">
+          <p>Our shop is open Monday to Saturday, 9:00 AM – 7:00 PM. We are closed on Sundays.</p>
+        </div>
+      </div>
+
+      <div class="clemente-villavicencio-faq-item">
+        <div class="clemente-villavicencio-faq-question">3. Do you offer home service or on-site repairs?</div>
+        <div class="clemente-villavicencio-faq-answer">
+          <p>Yes, we provide on-site repair and troubleshooting for homes and offices.  
+          Additional charges may apply depending on location.</p>
+        </div>
+      </div>
+
+      <div class="clemente-villavicencio-faq-item">
+        <div class="clemente-villavicencio-faq-question">4. Do you sell brand-new and second-hand computers?</div>
+        <div class="clemente-villavicencio-faq-answer">
+          <p>Yes, we sell both brand-new and refurbished computers.  
+          All refurbished units are tested and come with a warranty.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="clemente-villavicencio-footer">
+    &copy; <span id="year"></span> C’S Techno Shop | All Rights Reserved
+  </footer>
+
+  <script>
+   
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+  
+    const faqItems = document.querySelectorAll('.clemente-villavicencio-faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.clemente-villavicencio-faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+
+   
+    function logout() {
+      alert("✅ You have successfully logged out."); 
+      setTimeout(() => {
+        window.location.href = "SignUp.html"; 
+      }, 500);
+    }
+  </script>
+
+</body>
+</html>

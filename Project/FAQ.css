@@ -1,0 +1,194 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.clemente-villavicencio-body {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.clemente-villavicencio-header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; 
+}
+
+.clemente-villavicencio-logo {
+  display: flex;
+  align-items: center;
+}
+
+.clemente-villavicencio-logo-img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.clemente-villavicencio-h2 {
+  font-size: 22px;
+}
+
+
+.clemente-villavicencio-logout {
+  padding: 8px 12px;
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clemente-villavicencio-logout:hover {
+  background: #333;
+}
+
+
+.clemente-villavicencio-nav {
+  background: #fff;
+  padding: 10px 0;
+  border-bottom: 2px solid #000;
+}
+
+.clemente-villavicencio-ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clemente-villavicencio-a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.clemente-villavicencio-a.active {
+  border-bottom: 2px solid #000;
+}
+
+
+.clemente-villavicencio-faq {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.clemente-villavicencio-faq h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.clemente-villavicencio-faq h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+
+.clemente-villavicencio-faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.clemente-villavicencio-faq-item {
+  border-bottom: 1px solid #ccc;
+  padding: 12px 0;
+}
+
+.clemente-villavicencio-faq-item:last-child {
+  border-bottom: none;
+}
+
+.clemente-villavicencio-faq-question {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.clemente-villavicencio-faq-question:hover {
+  color: #e60000;
+}
+
+.clemente-villavicencio-faq-answer {
+  display: none;
+  padding-top: 8px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.clemente-villavicencio-faq-item.active .clemente-villavicencio-faq-answer {
+  display: block;
+}
+
+.clemente-villavicencio-footer {
+  background: black;
+  color: #bbb;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+  position: fixed;
+  bottom: 0;    
+  left: 0;       
+  width: 100%;   
+  z-index: 1000;  
+}
+
+
+.clemente-villavicencio-faq-answer {
+  display: none;
+  padding-top: 8px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.clemente-villavicencio-faq-item.active 
+.clemente-villavicencio-faq-answer {
+  display: block;
+  max-height: 200px; 
+}
+
+
+
+
+@media (max-width: 600px) {
+  .clemente-villavicencio-hero-content h2 {
+    font-size: 1.6rem;
+  }
+  .clemente-villavicencio-hero-content p {
+    font-size: 0.9rem;
+  }
+}
