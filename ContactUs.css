@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px; 
+  position: sticky;
 }
 
 .clemente-villavicencio-logo {
@@ -50,6 +51,7 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  flex-shrink: 0;
 }
 
 .clemente-villavicencio-logout:hover {
@@ -61,6 +63,8 @@
   background: #fff;
   padding: 10px 0;
   border-bottom: 2px solid #000;
+  overflow-x: auto; /* allow scroll sa maliit na screen */
+  -webkit-overflow-scrolling: touch;
 }
 
 .clemente-villavicencio-ul {
@@ -173,19 +177,32 @@
 
 @media (max-width: 768px) {
   .clemente-villavicencio-header {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
+    flex-direction: row; /* stay row layout */
+    justify-content: space-between; /* logo left, logout right */
   }
 
   .clemente-villavicencio-ul {
-    flex-direction: row;
-    gap: 20px;
+    gap: 15px; /* mas dikit sa cp */
+    font-size: 14px; /* mas maliit text */
   }
 
-  .clemente-villavicencio-contact-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+  .clemente-villavicencio-logo h2 {
+    font-size: 18px; /* lumiit logo text */
+  }
+
+  .clemente-villavicencio-logout {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clemente-villavicencio-ul {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .clemente-villavicencio-logo h2 {
+    font-size: 16px;
   }
 }
