@@ -46,12 +46,12 @@
 .clemente-villavicencio-search-box {
   background: #fff;
   border-radius: 15px;
-  padding: 2px 8px;     /* liit ng padding */
+  padding: 2px 8px;     
   display: flex;
   align-items: center;
   justify-content: center; 
-  width: 140px;         /* mas maliit width */
-  height: 28px;         /* control height */
+  width: 140px;        
+  height: 28px;        
 }
 
 .clemente-villavicencio-search-box input {
@@ -59,7 +59,7 @@
   outline: none;
   padding: 6px;
   font-size: 14px;
-   width: 100%;          /* sakto sa loob */
+   width: 100%;         
   height: 100%;    
 }
 
@@ -249,17 +249,17 @@
 
 @media (max-width: 768px) {
   .clemente-villavicencio-header {
-    flex-direction: row; /* stay row layout */
-    justify-content: space-between; /* logo left, logout right */
+    flex-direction: row; 
+    justify-content: space-between; 
   }
 
   .clemente-villavicencio-ul {
-    gap: 15px; /* mas dikit sa cp */
-    font-size: 14px; /* mas maliit text */
+    gap: 15px;
+    font-size: 14px; 
   }
 
   .clemente-villavicencio-logo h2 {
-    font-size: 18px; /* lumiit logo text */
+    font-size: 18px;
   }
 
   .clemente-villavicencio-logout {
@@ -287,6 +287,6 @@
   }
 
   .clemente-villavicencio-search-box input {
-    font-size: 12px; /* maliit na font */
+    font-size: 12px; 
   }
 }

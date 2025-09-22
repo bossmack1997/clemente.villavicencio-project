@@ -65,7 +65,7 @@
   background: #fff;
   padding: 10px 0;
   border-bottom: 2px solid #000;
-  overflow-x: auto; /* allow scroll sa maliit na screen */
+  overflow-x: auto; 
   -webkit-overflow-scrolling: touch;
 }
 
@@ -178,17 +178,17 @@
 }
 @media (max-width: 768px) {
   .clemente-villavicencio-header {
-    flex-direction: row; /* stay row layout */
-    justify-content: space-between; /* logo left, logout right */
+    flex-direction: row; 
+    justify-content: space-between; 
   }
 
   .clemente-villavicencio-ul {
-    gap: 15px; /* mas dikit sa cp */
-    font-size: 14px; /* mas maliit text */
+    gap: 15px; 
+    font-size: 14px; 
   }
 
   .clemente-villavicencio-logo h2 {
-    font-size: 18px; /* lumiit logo text */
+    font-size: 18px; 
   }
 
   .clemente-villavicencio-logout {
