@@ -264,20 +264,6 @@
   margin: auto;
   color: #555;
 }
-.clemente-villavicencio-product-citation{
-  display: block;
-  width: 100%;
-  font-size: 12px;
-  font-weight: 300;
-  font-style: italic;
-  color: #666;
-  margin-top: 6px;
-
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis;
-}
-
 .clemente-villavicencio-about-preview .clemente-villavicencio-btn {
   display: inline-block;
   margin-top: 20px;
