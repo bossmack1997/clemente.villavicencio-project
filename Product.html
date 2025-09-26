@@ -6,6 +6,66 @@
   <title>C’S Techno Shop - Products</title>
   <link rel="stylesheet" href="Product.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  body{
+    font-family:Arial;
+    margin:0;
+    padding:0;}
+button{
+  cursor:pointer;
+  padding:5px 10px;
+  border:none;
+  border-radius:5px;}
+
+
+#cartModal{
+  display:none;
+  position:fixed;
+  top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.9);
+  color:#fff; z-index:2000;
+  overflow-y:auto; padding:20px;
+}
+
+#cartContent{
+  max-width:800px; 
+  margin:0 auto; 
+  background:#222; 
+  padding:20px; 
+  border-radius:10px;
+}
+
+#cartContent h2{
+  margin-top:0;}
+.cartItem{
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  padding:8px 0; 
+  border-bottom:1px solid #444;}
+.cartItem img{
+  width:50px; 
+  height:50px; 
+  object-fit:cover;
+   border-radius:5px;
+    margin-right:10px;}
+
+.closeBtn{float:right;
+   background:#ff4d4f; 
+   color:#fff;
+    padding:5px 10px; 
+    border-radius:5px; 
+    cursor:pointer;}
+.confirmBtn{
+  background:grey;
+  color:#fff;
+  padding:10px;
+  border-radius:5px;
+  width:100%;
+  cursor:pointer;}
+.checkoutForm input, .checkoutForm textarea, .checkoutForm select{width:100%;padding:5px;margin-bottom:10px;border-radius:5px;border:none;}
+</style>
+
 </head>
 <body class="clemente-villavicencio-body">
 
@@ -20,6 +80,8 @@
       <input type="text" placeholder="Search..." class="clemente-villavicencio-input">
     </div>
     <button onclick="logout()" class="clemente-villavicencio-logout">Logout</button>
+
+    
   </header>
 
   <nav class="clemente-villavicencio-nav">
@@ -42,47 +104,178 @@
           Welcome to C'S Techno – your one-stop shop for high-quality laptops, keyboards, and mice. Whether you're a student, gamer, or professional, we offer the latest tech gear to keep you connected and productive. At C'S Techno, we combine reliable products with competitive prices and fast delivery, making it easier than ever to upgrade your setup. Explore our collection and power up your tech today!
         </p>
         <div class="clemente-villavicencio-buttons">
-          <button class="clemente-villavicencio-btn">Shop Now</button>
-          <button class="clemente-villavicencio-btn-outline">Add to Cart</button>
+
+          <button class="clemente-villavicencio-btn" onclick="openAllProducts()">Shop More</button>
+        <button id="cartIcon" onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+
+<!-- Fullscreen Cart Modal -->
+<div id="cartModal">
+  <div id="cartContent">
+    <button class="closeBtn" onclick="closeCartModal()">←Back</button>
+    <h2>Your Cart</h2>
+    <div id="cartItemsWrapper"></div>
+    <h3>Total: ₱<span id="cartTotal">0</span></h3>
+    
+    <h2>Checkout Information</h2>
+    <form id="checkoutForm" class="checkoutForm">
+      <label>Name:</label><br>
+      <input type="text" id="customerName" required><br>
+      <label>Email:</label><br>
+      <input type="email" id="customerEmail" required><br>
+      <label>Address:</label><br>
+      <textarea id="customerAddress" required></textarea><br>
+      <label>Payment Method:</label><br>
+      <select id="paymentMethod">
+        <option value="GCash">GCash</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+      </select><br>
+      <button type="submit" class="confirmBtn">Confirm Order</button>
+    </form>
+  </div>
+</div>
         </div>
       </div>
     </div>
   </section>
 
- 
-  <section class="clemente-villavicencio-product-section">
-    <h2 class="clemente-villavicencio-h2">PRODUCTS</h2>
-    <div class="clemente-villavicencio-product-grid">
-      <div class="clemente-villavicencio-product-card">
-        <img src="img/mouse.jpg" alt="Mouse" class="clemente-villavicencio-img">
-        <h3 class="clemente-villavicencio-h3">Mouse</h3>
-        <h4 class="clemente-villavicencio-h4">₱800</h4>
-        <!-- https://www.techolac.com/computers
-          /best-gaming-mouse/-->
-      </div>
+<h2 class="clemente-villavicencio-h2" style="background: linear-gradient(90deg, #f7b733, #fc4a1a);">
+  Best Seller
+</h2>
 
-      <div class="clemente-villavicencio-product-card">
-        <img src="img/keyboard.jpg" alt="Keyboard" class="clemente-villavicencio-img">
-  
-        <!--https://www.google.com/url?sa=i&url=https%3A%2F%2Fkreo-tech.com%2Fproducts%2Fswarm-black-purple-wireless-gaming-keyboard&psig=AOvVaw3ENaebeVDyh6WG_MROS29W&ust=1758926006434000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMDHyKT89I8DFQAAAAAdAAAAABAX-->
-       <h3 class="clemente-villavicencio-h3">Keyboard</h3>
-        <h4 class="clemente-villavicencio-h4">₱1,000</h4>
+<section class="clemente-villavicencio-product-section">
+  <!-- Best Seller Items -->
+  <div class="clemente-villavicencio-product">
+    <img src="img/mouse.jpg" alt="Mouse">
+    <h4>Mouse</h4>
+    <p>₱800</p>
+    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mouse', 800)">Buy</button>
+    <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mouse',800)">Add to Cart</button>
+  </div>
+  <div class="clemente-villavicencio-product">
+    <img src="img/images (1).jpg" alt="Mechanical Keyboard">
+    <h4>Mechanical Keyboard</h4>
+    <p>₱2000</p>
+    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mechanical Keyboard', 2000)">Buy</button>
+    <button class="clemente-villavicencio-addtocart"onclick="addToCart('Mechanical Keyboard',2000)">Add to Cart</button>
+  </div>
+
+   <div class="clemente-villavicencio-product">
+    <img src="img/laptop.jpg" alt="Mechanical Keyboard">
+    <h4>Laptop</h4>
+    <p>₱69000</p>
+    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Laptop', 2000)">Buy</button>
+    <button class="clemente-villavicencio-addtocart" onclick="addToCart('Laptop',6900)">Add to Cart</button>
+
+  </div>
+   <div class="clemente-villavicencio-product">
+    <img src="img/set1.jpg" alt="Mechanical Keyboard">
+    <h4>Set A</h4>
+    <p>₱130,000</p>
+    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mechanical Keyboard', 2000)">Buy</button>
+    <button class="clemente-villavicencio-addtocart" onclick="addToCart('Set A',130000)">Add to Cart</button>
+  </div>
+</section>
+
+
+<!-- Fullscreen All Products Modal -->
+<div id="allProductsModal" class="all-products-modal">
+  <div class="all-products-content">
+    <button class="back-btn" onclick="closeAllProducts()">← Back</button>
+    <h2>All Products</h2>
+    <div class="clemente-villavicencio-product-section" style="flex-wrap: wrap;">
+      <div class="clemente-villavicencio-product">
+        <img src="img/laptop.jpg" alt="Laptop">
+        <h4>Laptop</h4>
+        <p>₱55,000</p>
+        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Laptop', 55000)">Buy</button>
+        <button class="clemente-villavicencio-addtocart" onclick="addToCart('Laptop',55000)">Add to Cart</button>
       </div>
-      <div class="clemente-villavicencio-product-card">
-        <img src="img/headset.jpg" alt="Monitor" class="clemente-villavicencio-img">
-        <h3 class="clemente-villavicencio-h3">Headset</h3>
-        <h4 class="clemente-villavicencio-h4">₱2,500</h4>
-         <!--https://www.google.com/imgres?q=headset&imgurl=https%3A%2F%2Fdlcdnwebimgs.asus.com%2Fgain%2F4BB18AEF-347E-4DB6-B78C-C0FFE1F20385%2Fw750%2Fh470%2Ffwebp&imgrefurl=https%3A%2F%2Frog.asus.com%2Fph%2Fheadsets-audio-group%2F&docid=Q_B7baFgcefpGM&tbnid=E2KLUhcdREjKZM&vet=12ahUKEwjn44z2_fSPAxVRffUHHXDXGH4QM3oECB8QAA..i&w=750&h=470&hcb=2&ved=2ahUKEwjn44z2_fSPAxVRffUHHXDXGH4QM3oECB8QAA-->
+      <div class="clemente-villavicencio-product">
+        <img src="img/keyboard.jpg" alt="Keyboard">
+        <h4>Keyboard</h4>
+        <p>₱1800</p>
+        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Keyboard', 1800)">Buy</button>
+        <button class="clemente-villavicencio-addtocart" onclick="addToCart('keyboard',1800)">Add to Cart</button>
+      </div>
+      <div class="clemente-villavicencio-product">
+        <img src="img/mouse.jpg" alt="Mouse">
+        <h4>Mouse</h4>
+        <p>₱800</p>
+        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mouse', 800)">Buy</button>
+        <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mouse',800)">Add to Cart</button>
+      </div>
+      <div class="clemente-villavicencio-product">
+        <img src="img/images (1).jpg" alt="Mechanical Keyboard">
+        <h4>Mechanical Keyboard</h4>
+        <p>₱2000</p>
+        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mechanical Keyboard', 2000)">Buy</button>
+        <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mechanical keyboard',130000)">Add to Cart</button>
       </div>
     </div>
-  </section>
+  </div>
+</div>
+
+<!-- Checkout Modal -->
+<div id="checkoutModal" class="checkout-modal">
+  <div class="checkout-content">
+    <h2 id="checkoutProductName">Product</h2>
+    <p id="checkoutProductPrice">₱0</p>
+    
+    <label>Brand:</label>
+    <select id="checkoutBrand">
+      <option value="Brand A">Brand A</option>
+      <option value="Brand B">Brand B</option>
+      <option value="Brand C">Brand C</option>
+    </select>
+
+    <label>Quantity:</label>
+    <input type="number" id="checkoutQty" value="1" min="1">
+
+    <p><b>Total:</b> ₱<span id="checkoutTotal">0</span></p>
+
+    <button onclick="placeOrder()">Confirm Order</button>
+    <button onclick="closeCheckout()">Cancel</button>
+  </div>
+</div>
 
 
   <footer class="clemente-villavicencio-footer">
     &copy; <span id="year"></span> C’S Techno Shop | All Rights Reserved
   </footer>
 
+<script>
+function openAllProducts() {
+  document.getElementById('allProductsModal').style.display = 'block';
+}
 
+function closeAllProducts() {
+  document.getElementById('allProductsModal').style.display = 'none';
+}
+
+function openCheckout(name, price) {
+  document.getElementById('checkoutProductName').innerText = name;
+  document.getElementById('checkoutProductPrice').innerText = `₱${price}`;
+  document.getElementById('checkoutQty').value = 1;
+  document.getElementById('checkoutTotal').innerText = price;
+  document.getElementById('checkoutModal').style.display = 'block';
+}
+
+function closeCheckout() {
+  document.getElementById('checkoutModal').style.display = 'none';
+}
+
+document.getElementById('checkoutQty').addEventListener('input', function() {
+  const price = parseFloat(document.getElementById('checkoutProductPrice').innerText.replace('₱',''));
+  const qty = parseInt(this.value);
+  document.getElementById('checkoutTotal').innerText = price * qty;
+});
+
+function placeOrder() {
+  alert(`Order placed for ${document.getElementById('checkoutProductName').innerText}`);
+  closeCheckout();
+}
+</script>
   <script>
 
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -94,6 +287,124 @@
       }, 500); 
     }
   </script>
+
+  <script>
+function openProduct(id) {
+  document.getElementById(id).style.display = 'flex';
+}
+
+function closeProduct(id) {
+  document.getElementById(id).style.display = 'none';
+}
+</script>
+<script>
+function submitOrder(event) {
+  event.preventDefault();
+  alert("✅ Order placed successfully!");
+
+  // close current modal
+  document.querySelectorAll(".product-modal").forEach(modal => {
+    modal.style.display = "none";
+  });
+}
+</script>
+
+<script>
+let currentProduct = {name: "", price: 0};
+
+function openCheckout(name, price) {
+  currentProduct = {name, price};
+  document.getElementById("checkoutProductName").textContent = name;
+  document.getElementById("checkoutProductPrice").textContent = "₱" + price;
+  document.getElementById("checkoutQty").value = 1;
+  document.getElementById("checkoutTotal").textContent = price;
+  document.getElementById("checkoutModal").style.display = "flex";
+}
+
+function closeCheckout() {
+  document.getElementById("checkoutModal").style.display = "none";
+}
+
+document.getElementById("checkoutQty").addEventListener("input", function() {
+  let qty = parseInt(this.value) || 1;
+  document.getElementById("checkoutTotal").textContent = currentProduct.price * qty;
+});
+
+function placeOrder() {
+  let brand = document.getElementById("checkoutBrand").value;
+  let qty = document.getElementById("checkoutQty").value;
+  let total = document.getElementById("checkoutTotal").textContent;
+
+  alert("✅ Order Placed!\n\n" +
+        "Product: " + currentProduct.name + "\n" +
+        "Brand: " + brand + "\n" +
+        "Quantity: " + qty + "\n" +
+        "Total: ₱" + total);
+
+  closeCheckout();
+}
+</script>
+
+<script>
+let cart = [];
+let total = 0;
+
+// Add item to cart
+function addToCart(name, price, image=''){
+  cart.push({name, price, image});
+  total += price;
+  updateCartUI();
+}
+
+// Update cart modal
+function updateCartUI(){
+  const wrapper=document.getElementById('cartItemsWrapper');
+  wrapper.innerHTML="";
+  cart.forEach((item,index)=>{
+    const div=document.createElement('div');
+    div.className="cartItem";
+    div.innerHTML = `
+      <div style="display:flex;align-items:center;">
+        ${item.image? `<img src="${item.image}">` : ""}
+        <span>${item.name} - ₱${item.price}</span>
+      </div>
+      <button onclick="removeFromCart(${index})">Cancel</button>
+    `;
+    wrapper.appendChild(div);
+  });
+  document.getElementById('cartCount').innerText = cart.length;
+  document.getElementById('cartTotal').innerText = total;
+}
+
+// Remove item from cart
+function removeFromCart(index){
+  total -= cart[index].price;
+  cart.splice(index,1);
+  updateCartUI();
+}
+
+// Open/Close Cart Modal
+function toggleCart(){
+  const modal=document.getElementById('cartModal');
+  modal.style.display = modal.style.display==='block'?'none':'block';
+}
+function closeCartModal(){
+  document.getElementById('cartModal').style.display='none';
+}
+
+// Checkout
+document.getElementById('checkoutForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if(cart.length===0){alert("Cart is empty!"); return;}
+  let name=document.getElementById('customerName').value;
+  let email=document.getElementById('customerEmail').value;
+  let address=document.getElementById('customerAddress').value;
+  let payment=document.getElementById('paymentMethod').value;
+  alert(`✅ Order Confirmed!\nCustomer: ${name}\nEmail: ${email}\nAddress: ${address}\nPayment: ${payment}\nTotal: ₱${total}`);
+  cart=[]; total=0; updateCartUI(); closeCartModal();
+});
+</script>
+
 
 </body>
 </html>
