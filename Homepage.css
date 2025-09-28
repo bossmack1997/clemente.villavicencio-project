@@ -123,10 +123,10 @@
 
 
 .clemente-villavicencio-hero {
-  position: relative; /* needed for pseudo-elements */
+  position: relative; 
   text-align: center;
   padding: 80px 20px;
-  overflow: hidden; /* prevent pseudo-elements from overflowing */
+  overflow: hidden;
 }
 
 .clemente-villavicencio-hero-content {
@@ -144,19 +144,7 @@
   margin-bottom: 20px;
 }
 
-.clemente-villavicencio-hero img {
-  margin-top: 30px;
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.clemente-villavicencio-hero img:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-}
 
 /* Background Circles */
 .clemente-villavicencio-hero::before,

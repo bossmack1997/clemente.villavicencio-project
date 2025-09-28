@@ -107,38 +107,60 @@
   Best Seller
 </h2>
 
-<section class="clemente-villavicencio-product-section">
+  <section class="clemente-villavicencio-product-section">
   <!-- Best Seller Items -->
   <div class="clemente-villavicencio-product">
-    <img src="img/mouse.jpg" alt="Mouse">
-    <h4>Mouse</h4>
-    <p>₱800</p>
-    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mouse', 800)">Buy</button>
-    <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'Mouse', 800, 'img/mouse.jpg', this)">Add to Cart</button>
-
+    <div class="clemente-villavicencio-imgBx">
+      <img src="img/mouse.jpg" alt="Mouse">
+    </div>
+    <div class="clemente-villavicencio-details">
+      <h4>Mouse</h4>
+      <p class="clemente-villavicencio-price">₱800</p>
+      <p class="clemente-villavicencio-desc">Smooth and responsive optical mouse for work and gaming.</p>
+      <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mouse', 800)">Buy</button>
+      <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mouse', 800, 'img/mouse.jpg', this)">Add to Cart</button>
+    </div>
   </div>
+
   <div class="clemente-villavicencio-product">
-    <img src="img/images (1).jpg" alt="Mechanical Keyboard">
-    <h4>Mechanical Keyboard</h4>
-    <p>₱2000</p>
-    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mechanical Keyboard', 2000)">Buy</button>
-    <button class="clemente-villavicencio-addtocart"onclick="addToCart( 'Mechanical Keyboard',2000, 'img/images (1).jpg', this)">Add to Cart</button>
+    <div class="clemente-villavicencio-imgBx">
+      <img src="img/images (1).jpg" alt="Mechanical Keyboard">
+    </div>
+    <div class="clemente-villavicencio-details">
+      <h4>Mechanical Keyboard</h4>
+      <p class="clemente-villavicencio-price">₱2000</p>
+      <p class="clemente-villavicencio-desc">Durable mechanical keyboard with tactile feedback for gamers.</p>
+      <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mechanical Keyboard', 2000)">Buy</button>
+      <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mechanical Keyboard',2000,'img/images (1).jpg', this)">Add to Cart</button>
+    </div>
   </div>
 
+ 
+
    <div class="clemente-villavicencio-product">
+       <div class="clemente-villavicencio-imgBx">
     <img src="img/laptop.jpg" alt="Mechanical Keyboard">
+    </div>
+    <div class="clemente-villavicencio-details">
     <h4>Laptop</h4>
-    <p>₱69000</p>
-    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Laptop', 2000)">Buy</button>
-    <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'Laptop',6900, 'img/laptop.jpg', this)">Add to Cart</button>
-
+    <p class="clemente-villavicencio-price">₱69000</p>
+      <p class="clemente-villavicencio-desc">Durable mechanical keyboard with tactile feedback for gamers.</p>
+    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Laptop', 69000)">Buy</button>
+    <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'Laptop',69000, 'img/laptop.jpg', this)">Add to Cart</button>
+</div>
   </div>
+
    <div class="clemente-villavicencio-product">
+    <div class="clemente-villavicencio-imgBx">
     <img src="img/set1.jpg" alt="Mechanical Keyboard">
+    </div>
+    <div class="clemente-villavicencio-details">
     <h4>Set A</h4>
-    <p>₱130,000</p>
+    <p class="clemente-villavicencio-price">₱69000</p>
+      <p class="clemente-villavicencio-desc">Durable mechanical keyboard with tactile feedback for gamers.</p>
     <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mechanical Keyboard', 2000)">Buy</button>
     <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'Set A',130000, 'img/set1.jpg', this)">Add to Cart</button>
+  </div>
   </div>
 </section>
 
@@ -152,69 +174,106 @@
     <div class="clemente-villavicencio-product-section" style="flex-wrap: wrap;">
 
       <div class="clemente-villavicencio-product">
-        <img src="img/laptop.jpg" alt="Laptop">
+        <div class="clemente-villavicencio-img-container">
+          <img src="img/laptop.jpg" alt="Laptop">
+          <div class="clemente-villavicencio-overlay">
         <h4>Laptop</h4>
-        <p>₱55,000</p>
+        <p class="clemente-villavicencio-price">₱55,000</p>
+        <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
         <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Laptop', 55000)">Buy</button>
         <button class="clemente-villavicencio-addtocart" onclick="addToCart('Laptop',55000, 'img/laptop.jpg',this)">Add to Cart</button>
       </div>
-
-      <div class="clemente-villavicencio-product">
-        <img src="img/keyboard.jpg" alt="Keyboard">
-        <h4>Keyboard</h4>
-        <p>₱1800</p>
-        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Keyboard', 1800)">Buy</button>
-        <button class="clemente-villavicencio-addtocart" onclick="addToCart('keyboard',1800, 'img/keyboard.jpg',this)">Add to Cart</button>
       </div>
+      </div>
+      <div class="clemente-villavicencio-product">
+        <div class="clemente-villavicencio-img-container">
+          <img src="img/keyboard.jpg" alt="Keyboard">
+          <div class="clemente-villavicencio-overlay">
+        <h4>Keyboard</h4>
+         <p class="clemente-villavicencio-price">₱1800</p>
+        <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
+        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Keyboard', 1800)">Buy</button>
+        <button class="clemente-villavicencio-addtocart" onclick="addToCart('Keyboard',1800, 'img/keyboard.jpg',this)">Add to Cart</button>
+      </div>
+    </div>
+     </div>
 
       <div class="clemente-villavicencio-product">
+          <div class="clemente-villavicencio-img-container">
         <img src="img/mouse.jpg" alt="Mouse">
+         <div class="clemente-villavicencio-overlay">
         <h4>Mouse</h4>
-        <p>₱800</p>
+          <p class="clemente-villavicencio-price">₱8000</p>
+        <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
         <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mouse', 800)">Buy</button>
         <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mouse',800, 'img/mouse.jpg', this)">Add to Cart</button>
       </div>
+          </div>
+      </div>
 
       <div class="clemente-villavicencio-product">
+         <div class="clemente-villavicencio-img-container">
         <img src="img/headset.jpg" alt="Mechanical Keyboard">
+         <div class="clemente-villavicencio-overlay">
         <h4>Mechanical Keyboard</h4>
-        <p>₱2000</p>
+          <p class="clemente-villavicencio-price">₱2000</p>
+        <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
         <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Headset', 2000)">Buy</button>
         <button class="clemente-villavicencio-addtocart" onclick="addToCart('Headset',2000, 'img/headset.jpg', this)">Add to Cart</button>
       </div>
-
-      <div class="clemente-villavicencio-product">
-        <img src="img/powersupply.jpg" alt="Power Supply">
-        <h4>Power Supply</h4>
-        <p>₱1600</p>
-        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Power Supply', 1600)">Buy</button>
-        <button class="clemente-villavicencio-addtocart" onclick="addToCart('Power Supply',130000,'img/powersupply.jpg', this)">Add to Cart</button>
+         </div>
       </div>
 
       <div class="clemente-villavicencio-product">
+         <div class="clemente-villavicencio-img-container">
+        <img src="img/powersupply.jpg" alt="Power Supply">
+         <div class="clemente-villavicencio-overlay">
+        <h4>Power Supply</h4>
+         <p class="clemente-villavicencio-price">₱1600</p>
+        <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
+        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Power Supply', 1600)">Buy</button>
+        <button class="clemente-villavicencio-addtocart" onclick="addToCart('Power Supply',1600,'img/powersupply.jpg', this)">Add to Cart</button>
+      </div>
+         </div>
+      </div>
+
+      <div class="clemente-villavicencio-product">
+         <div class="clemente-villavicencio-img-container">
         <img src="img/rgbfan.png" alt="RGB FAN">
+         <div class="clemente-villavicencio-overlay">
         <h4>RGB FAN</h4>
-        <p>₱600</p>
+          <p class="clemente-villavicencio-price">₱600</p>
+        <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
         <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('RGB FAN', 600)">Buy</button>
         <button class="clemente-villavicencio-addtocart" onclick="addToCart('RGB FAN',600,'img/rgbfan.jpg', this)">Add to Cart</button>
       </div>
+      </div>
+      </div>
 
       <div class="clemente-villavicencio-product">
+         <div class="clemente-villavicencio-img-container">
         <img src="img/sytemunitcase.jpg" alt="System Unit Case">
+         <div class="clemente-villavicencio-overlay">
         <h4> System Unit Case</h4>
-        <p>₱1900</p>
+         <p class="clemente-villavicencio-price">₱1900</p>
+        <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
         <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('System Unit Case', 1900)">Buy</button>
         <button class="clemente-villavicencio-addtocart" onclick="addToCart('System Unit Case',1900, 'img/systemunitcase.jpg',this)">Add to Cart</button>
       </div>
-
+      </div>
+      </div>
       <div class="clemente-villavicencio-product">
+         <div class="clemente-villavicencio-img-container">
         <img src="img/set2.png" alt="Monitor Curve">
+         <div class="clemente-villavicencio-overlay">
         <h4>Monitor Curve</h4>
-        <p>₱12500</p>
+          <p class="clemente-villavicencio-price">₱12500</p>
+        <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
         <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Monitor Curve', 12500)">Buy</button>
         <button class="clemente-villavicencio-addtocart" onclick="addToCart('Monitor Curve',12500,'img/set2.png' ,this )">Add to Cart</button>
       </div>
-
+   </div>
+      </div>
     
 <!-- Search Results Modal -->
 <div id="searchModal" class="cart-modal" style="display:none;">
@@ -289,7 +348,7 @@ function showSlides() {
   slides[slideIndex - 1].classList.add("active");
 }
 
-setInterval(showSlides, 3000); // every 3s palit
+setInterval(showSlides, 3000);
 </script>
 
 
@@ -399,14 +458,14 @@ function placeOrder() {
 let cart = [];
 let total = 0;
 
-// Add item to cart with fly animation
+
 function addToCart(name, price, image = '', buttonEl = null) {
-  // 1️⃣ Fly to cart animation (kung may button na pinanggalingan)
+  
   if (buttonEl) {
     flyToCartAnimation(buttonEl);
   }
 
-  // 2️⃣ Normal add to cart logic
+ 
   cart.push({ name, price, image });
   total += price;
   updateCartUI();
@@ -445,7 +504,7 @@ function flyToCartAnimation(buttonEl) {
   }, 850);
 }
 
-// Update cart modal
+
 function updateCartUI() {
   const wrapper = document.getElementById('cartItemsWrapper');
   wrapper.innerHTML = "";
@@ -465,14 +524,14 @@ function updateCartUI() {
   document.getElementById('cartTotal').innerText = total;
 }
 
-// Remove item from cart
+
 function removeFromCart(index) {
   total -= cart[index].price;
   cart.splice(index, 1);
   updateCartUI();
 }
 
-// Open/Close Cart Modal
+
 function toggleCart() {
   const modal = document.getElementById('cartModal');
   modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
@@ -504,7 +563,7 @@ document.getElementById("productSearch").addEventListener("keyup", function () {
   let cartItems = document.getElementById("cartItems");
   let found = false;
 
-  cartItems.innerHTML = ""; // clear old results
+  cartItems.innerHTML = ""; 
 
   products.forEach(function (product) {
     let productName = product.querySelector("h4").textContent.toLowerCase();
@@ -519,13 +578,13 @@ document.getElementById("productSearch").addEventListener("keyup", function () {
                        product.querySelector("p").textContent;
       cartItems.appendChild(li);
     } else if (input === "") {
-      product.style.display = "block"; // reset kapag walang search
+      product.style.display = "block"; 
     } else {
       product.style.display = "none";
     }
   });
 
-  // 👉 Show only search modal
+ 
   document.getElementById("searchModal").style.display =
     (input !== "" && found) ? "block" : "none";
 });
