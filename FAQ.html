@@ -74,27 +74,6 @@
   </footer>
 
 
-  <script>
-   
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-  
-    const faqItems = document.querySelectorAll('.clemente-villavicencio-faq-item');
-    faqItems.forEach(item => {
-      const question = item.querySelector('.clemente-villavicencio-faq-question');
-      question.addEventListener('click', () => {
-        item.classList.toggle('active');
-      });
-    });
-
-   
-    function logout() {
-      alert("✅ You have successfully logged out."); 
-      setTimeout(() => {
-        window.location.href = "index.html"; 
-      }, 500);
-    }
-  </script>
 
 
   <script>
