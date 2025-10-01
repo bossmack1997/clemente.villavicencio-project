@@ -73,6 +73,7 @@
     &copy; <span id="year"></span> C&S Techno Shop | All Rights Reserved
   </footer>
 
+
   <script>
    
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -94,6 +95,19 @@
       }, 500);
     }
   </script>
+
+
+  <script>
+   document.querySelectorAll(".clemente-villavicencio-faq-question").forEach(question => {
+    question.addEventListener("click", () => {
+      const faqItem = question.parentElement;
+      faqItem.classList.toggle("active");
+    });
+  });
+   </script>
+   
+  <script src="script.js"></script>
+
 
 </body>
 </html>

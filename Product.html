@@ -6,7 +6,36 @@
   <title>C&S Techno Shop - Products</title>
   <link rel="stylesheet" href="Product.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+ /* Filters Section */
+.clemente-villavicencio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+}
 
+.clemente-villavicencio-filters select {
+  padding: 10px 14px;
+  border: 1px solid black;
+  border-radius: 6px;
+  background: white;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clemente-villavicencio-filters select:hover {
+  background: white;
+  border-color: #666;
+}
+
+</style>
 </head>
 <body class="clemente-villavicencio-body">
 
@@ -102,17 +131,93 @@
     </div>
   </section>
 
-<h2 class="clemente-villavicencio-h2" style="background: linear-gradient(90deg, #f7b733, #fc4a1a);">
-  Best Seller
-</h2>
+<!-- FILTERS SECTION -->
+<div class="clemente-villavicencio-filters">
+  <!-- Category -->
+  <select id="categoryFilter" onchange="filterProducts()">
+    <option value="">All Categories</option>
+    <option value="Laptop">Laptop</option>
+    <option value="Desktop">Desktop PC</option>
+    <option value="Monitor">Monitor</option>
+    <option value="Motherboard">Motherboard</option>
+    <option value="Processor">Processor (CPU)</option>
+    <option value="GPU">Graphics Card (GPU)</option>
+    <option value="RAM">RAM</option>
+    <option value="Storage">Storage (SSD/HDD)</option>
+    <option value="PSU">Power Supply</option>
+    <option value="Case">PC Case</option>
+    <option value="Keyboard">Keyboard</option>
+    <option value="Mouse">Mouse</option>
+    <option value="Headset">Headset</option>
+    <option value="Cooling">Cooling</option>
+  </select>
 
-  <section class="clemente-villavicencio-product-section">
-  <!-- Best Seller Items -->
-  <div class="clemente-villavicencio-product">
+  <!-- Brand -->
+  <select id="brandFilter" onchange="filterProducts()">
+    <option value="">All Brands</option>
+    <option value="Asus">Asus</option>
+    <option value="MSI">MSI</option>
+    <option value="Gigabyte">Gigabyte</option>
+    <option value="Acer">Acer</option>
+    <option value="Lenovo">Lenovo</option>
+    <option value="HP">HP</option>
+    <option value="Dell">Dell</option>
+    <option value="Intel">Intel</option>
+    <option value="AMD">AMD</option>
+    <option value="NVIDIA">NVIDIA</option>
+    <option value="Corsair">Corsair</option>
+    <option value="Logitech">Logitech</option>
+    <option value="Razer">Razer</option>
+  </select>
+
+  <!-- Price -->
+  <select id="priceFilter" onchange="filterProducts()">
+    <option value="">All Prices</option>
+    <option value="low">₱0 - ₱5,000</option>
+    <option value="mid">₱5,000 - ₱15,000</option>
+    <option value="high">₱15,000 - ₱30,000</option>
+    <option value="premium">₱30,000 - ₱50,000</option>
+    <option value="ultra">₱50,000+</option>
+  </select>
+
+  <!-- Color -->
+  <select id="colorFilter" onchange="filterProducts()">
+    <option value="">All Colors</option>
+    <option value="Black">Black</option>
+    <option value="White">White</option>
+    <option value="Grey">Grey</option>
+    <option value="Red">Red</option>
+    <option value="RGB">RGB</option>
+  </select>
+
+  <!-- Sort -->
+  <select id="sortFilter" onchange="sortProducts()">
+    <option value="">Sort By</option>
+    <option value="priceLow">Price: Low to High</option>
+    <option value="priceHigh">Price: High to Low</option>
+    <option value="nameAZ">Name: A-Z</option>
+    <option value="nameZA">Name: Z-A</option>
+    <option value="best">Best Seller</option>
+    <option value="new">New Arrival</option>
+  </select>
+</div>
+
+
+<section class="clemente-villavicencio-product-section">
+  <!-- Mouse -->
+  <div class="clemente-villavicencio-product" 
+       data-category="Mouse" 
+       data-brand="Logitech" 
+       data-price="800" 
+       data-color="white">
     <div class="clemente-villavicencio-imgBx">
       <img src="img/mouse.jpg" alt="Mouse">
-    </div>
-    <div class="clemente-villavicencio-details">
+  </div>
+      <div class="top-info">
+      <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+      <span class="stock">In Stock: <strong>12</strong></span>
+  </div>
+  <div class="clemente-villavicencio-details">
       <h4>Mouse</h4>
       <p class="clemente-villavicencio-price">₱800</p>
       <p class="clemente-villavicencio-desc"> Powered by AMD Ryzen™ & NVIDIA® RTX graphics, 
@@ -122,51 +227,185 @@
       <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mouse', 800, 'img/mouse.jpg', this)">Add to Cart</button>
     </div>
   </div>
-
-  <div class="clemente-villavicencio-product">
-    <div class="clemente-villavicencio-imgBx">
-      <img src="img/images (1).jpg" alt="Mechanical Keyboard">
+  <!-- Keyboard -->
+  <div class="clemente-villavicencio-product"
+     data-category="Keyboard" 
+     data-brand="Corsair" 
+     data-price="2000" 
+     data-color="RGB">
+     <div class="clemente-villavicencio-imgBx">
+      <img src="img/keyboard1.jpg" alt=" Keyboard1">
     </div>
-    <div class="clemente-villavicencio-details">
-      <h4>Mechanical Keyboard</h4>
+    <div class="top-info">
+      <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+      <span class="stock">In Stock: <strong>12</strong></span>
+    </div>
+  <div class="clemente-villavicencio-details">
+      <h4>Keyboard</h4>
       <p class="clemente-villavicencio-price">₱2000</p>
       <p class="clemente-villavicencio-desc">Responsive switches, customizable RGB backlight, and durable design for gaming & productivity. 
-<br><em>🔥 Level up your setup – order now!</em></p>
+                                                <br><em>🔥 Level up your setup – order now!</em></p>
       <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mechanical Keyboard', 2000)">Buy</button>
       <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mechanical Keyboard',2000,'img/images (1).jpg', this)">Add to Cart</button>
     </div>
   </div>
-
- 
-
-   <div class="clemente-villavicencio-product">
+   <div class="clemente-villavicencio-product"
+     data-category="Keyboard" 
+     data-brand="Razer" 
+     data-price="1900" 
+     data-color="white">
+     <div class="clemente-villavicencio-imgBx">
+      <img src="img/keyboard2.jpg" alt=" Keyboard2">
+    </div>
+    <div class="top-info">
+      <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+      <span class="stock">In Stock: <strong>12</strong></span>
+    </div>
+  <div class="clemente-villavicencio-details">
+      <h4>Keyboard</h4>
+      <p class="clemente-villavicencio-price">₱1900</p>
+      <p class="clemente-villavicencio-desc">Responsive switches, customizable RGB backlight, and durable design for gaming & productivity. 
+                                                <br><em>🔥 Level up your setup – order now!</em></p>
+      <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Keyboard', 1900)">Buy</button>
+      <button class="clemente-villavicencio-addtocart" onclick="addToCart('Keyboard',1900,'img/keyboard2.jpg', this)">Add to Cart</button>
+    </div>
+  </div>
+  <!-- Laptop -->
+  <div class="clemente-villavicencio-product" 
+     data-category="Laptop" 
+     data-brand="NVIDIA" 
+     data-price="69000" 
+     data-color="WHITE">
        <div class="clemente-villavicencio-imgBx">
-    <img src="img/laptop.jpg" alt="Mechanical Keyboard">
+       <img src="img/laptop.jpg" alt="laptop">
+  </div>
+    <div class="top-info">
+      <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+      <span class="stock">In Stock: <strong>12</strong></span>
     </div>
-    <div class="clemente-villavicencio-details">
-    <h4>Laptop</h4>
-    <p class="clemente-villavicencio-price">₱69000</p>
+  <div class="clemente-villavicencio-details">
+      <h4>Laptop</h4>
+      <p class="clemente-villavicencio-price">₱69000</p>
       <p class="clemente-villavicencio-desc"> Powered by AMD Ryzen™ & NVIDIA® RTX graphics, 
-      built with military-grade durability and a 144Hz display. 
+        built with military-grade durability and a 144Hz display. 
       <br><em>🔥 Limited stocks – order now!</em></p>
-    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Laptop', 69000)">Buy</button>
-    <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'Laptop',69000, 'img/laptop.jpg', this)">Add to Cart</button>
-</div>
+      <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Laptop', 69000)">Buy</button>
+      <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'Laptop',69000, 'img/laptop.jpg', this)">Add to Cart</button>
+  </div>
+  </div>
+  <!-- Desktop PCs -->
+  <div class="clemente-villavicencio-product"
+     data-category="Desktop" 
+     data-brand="Intel" 
+     data-price="45000" 
+     data-color="White">
+    <div class="clemente-villavicencio-imgBx">
+      <img src="img/pc1.jpg" alt="PC1">
+    </div>
+        <div class="top-info">
+            <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+            <span class="stock">In Stock: <strong>12</strong></span>
+        </div>
+          <div class="clemente-villavicencio-details">
+              <h4>Set A</h4>
+              <p class="clemente-villavicencio-price">₱59,000</p>
+              <p class="clemente-villavicencio-desc">i9-14900K / RTX 4090 / 32GB DDR5 / 1TB SSD + 2TB HDD / 1000W PSU / 27” 4K 144Hz Monitor
+                    <br>🔥 4K Gaming & Editing Beast – Order Now!</p>
+                        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('pc1', 59000)">Buy</button>
+                        <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'pc1',59000, 'img/pc1.jpg', this)">Add to Cart</button>
+          </div>
+    </div>
+     <div class="clemente-villavicencio-product"
+            data-category="Desktop" 
+            data-brand="MSI" 
+            data-price="69000" 
+            data-color="Black">
+    <div class="clemente-villavicencio-imgBx">
+      <img src="img/pc2.jpg" alt="PC2">
+    </div>
+        <div class="top-info">
+            <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+            <span class="stock">In Stock: <strong>12</strong></span>
+        </div>
+          <div class="clemente-villavicencio-details">
+              <h4>Set A</h4>
+              <p class="clemente-villavicencio-price">₱69,000</p>
+              <p class="clemente-villavicencio-desc">i9-14900K / RTX 4090 / 32GB DDR5 / 1TB SSD + 2TB HDD / 1000W PSU / 27” 4K 144Hz Monitor
+                    <br>🔥 4K Gaming & Editing Beast – Order Now!</p>
+                        <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('pc2', 69000)">Buy</button>
+                        <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'pc2',69000, 'img/pc2.jpg', this)">Add to Cart</button>
+          </div>
+    </div>
+
+       <!-- systemunitcase -->
+  <div class="clemente-villavicencio-product" 
+     data-category="Case" 
+     data-brand="Corsair" 
+     data-price="1900" 
+     data-color="WHITE">
+       <div class="clemente-villavicencio-imgBx">
+       <img src="img/sytemunitcase.jpg" alt="system unit case">
+  </div>
+    <div class="top-info">
+      <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+      <span class="stock">In Stock: <strong>12</strong></span>
+    </div>
+  <div class="clemente-villavicencio-details">
+      <h4>System Unit Case</h4>
+      <p class="clemente-villavicencio-price">₱1900</p>
+      <p class="clemente-villavicencio-desc">Stylish and durable case for your PC components.
+      <br><em>🔥 Limited stocks – order now!</em></p>
+      <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('System Unit Case', 1900)">Buy</button>
+      <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'System Unit Case',1900, 'img/sytemunitcase.jpg', this)">Add to Cart</button>
+  </div>
   </div>
 
-   <div class="clemente-villavicencio-product">
-    <div class="clemente-villavicencio-imgBx">
-    <img src="img/set1.jpg" alt="Mechanical Keyboard">
+   <!-- powersupply-->
+  <div class="clemente-villavicencio-product" 
+     data-category="PSU" 
+     data-brand="Corsair" 
+     data-price="1600" 
+     data-color="black">
+       <div class="clemente-villavicencio-imgBx">
+       <img src="img/powersupply.jpg" alt="power supply">
+  </div>
+    <div class="top-info">
+      <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+      <span class="stock">In Stock: <strong>12</strong></span>
     </div>
-    <div class="clemente-villavicencio-details">
-    <h4>Set A</h4>
-    <p class="clemente-villavicencio-price">₱69000</p>
-      <p class="clemente-villavicencio-desc">i9-14900K / RTX 4090 / 32GB DDR5 / 1TB SSD + 2TB HDD / 1000W PSU / 27” 4K 144Hz Monitor
-<br>🔥 4K Gaming & Editing Beast – Order Now!</p>
-    <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mechanical Keyboard', 2000)">Buy</button>
-    <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'Set A',130000, 'img/set1.jpg', this)">Add to Cart</button>
+  <div class="clemente-villavicencio-details">
+      <h4>Power Supply</h4>
+      <p class="clemente-villavicencio-price">₱1600</p>
+      <p class="clemente-villavicencio-desc">High-efficiency power supply for your gaming rig.
+      <br><em>🔥 Limited stocks – order now!</em></p>
+      <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Power Supply', 1600)">Buy</button>
+      <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'Power Supply',1600, 'img/powersupply.jpg', this)">Add to Cart</button>
   </div>
   </div>
+
+   <!-- rgbfan-->
+  <div class="clemente-villavicencio-product" 
+     data-category="Cooling" 
+     data-brand="Logitech" 
+     data-price="600" 
+     data-color="RGB">
+       <div class="clemente-villavicencio-imgBx">
+       <img src="img/rgbfan.png" alt="RGB Fan">
+  </div>
+    <div class="top-info">
+      <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+      <span class="stock">In Stock: <strong>12</strong></span>
+    </div>
+  <div class="clemente-villavicencio-details">
+      <h4>RGB Fan</h4>
+      <p class="clemente-villavicencio-price">₱600</p>
+      <p class="clemente-villavicencio-desc">High-performance RGB fan for optimal cooling.
+      <br><em>🔥 Limited stocks – order now!</em></p>
+      <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('RGB Fan', 600)">Buy</button>
+      <button class="clemente-villavicencio-addtocart" onclick="addToCart( 'RGB Fan',600, 'img/rgbfan.png', this)">Add to Cart</button>
+  </div>
+  </div>
+
 </section>
 
 
@@ -177,11 +416,14 @@
     <h2>All Products</h2>
 
     <div class="clemente-villavicencio-product-section" style="flex-wrap: wrap;">
-
       <div class="clemente-villavicencio-product">
         <div class="clemente-villavicencio-img-container">
-         
           <img src="img/laptop.jpg" alt="Laptop">
+      
+        <div class="top-info">
+            <span class="rating">⭐⭐⭐⭐☆ (4.5)</span>
+            <span class="stock">In Stock: <strong>12</strong></span>
+        </div>
         
           <div class="clemente-villavicencio-overlay">
         <h4>Laptop</h4>
@@ -194,13 +436,13 @@
       </div>
       <div class="clemente-villavicencio-product">
         <div class="clemente-villavicencio-img-container">
-          <img src="img/keyboard.jpg" alt="Keyboard">
+          <img src="img/keyboard1.jpg" alt="Keyboard">
           <div class="clemente-villavicencio-overlay">
         <h4>Mechanical Keyboard</h4>
          <p class="clemente-villavicencio-price">₱1800</p>
-        <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
+        <p class="clemente-villavicencio-desc">High performance keyboard for work and gaming.</p>
         <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('Mechanical Keyboard', 1800)">Buy</button>
-        <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mechanical Keyboard',1800, 'img/keyboard.jpg',this)">Add to Cart</button>
+        <button class="clemente-villavicencio-addtocart" onclick="addToCart('Mechanical Keyboard',1800, 'img/keyboard1.jpg',this)">Add to Cart</button>
       </div>
     </div>
      </div>
@@ -252,7 +494,7 @@
           <p class="clemente-villavicencio-price">₱600</p>
         <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
         <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('RGB FAN', 600)">Buy</button>
-        <button class="clemente-villavicencio-addtocart" onclick="addToCart('RGB FAN',600,'img/rgbfan.jpg', this)">Add to Cart</button>
+        <button class="clemente-villavicencio-addtocart" onclick="addToCart('RGB FAN',600,'img/rgbfan.png', this)">Add to Cart</button>
       </div>
       </div>
       </div>
@@ -265,7 +507,7 @@
          <p class="clemente-villavicencio-price">₱1900</p>
         <p class="clemente-villavicencio-desc">High performance laptop for work and gaming.</p>
         <button class="clemente-villavicencio-buy-btn" onclick="openCheckout('System Unit Case', 1900)">Buy</button>
-        <button class="clemente-villavicencio-addtocart" onclick="addToCart('System Unit Case',1900, 'img/systemunitcase.jpg',this)">Add to Cart</button>
+        <button class="clemente-villavicencio-addtocart" onclick="addToCart('System Unit Case',1900, 'img/sytemunitcase.jpg',this)">Add to Cart</button>
       </div>
       </div>
       </div>
@@ -305,9 +547,9 @@
 
     <label>Brand:</label>
     <select id="checkoutBrand">
-      <option value="Brand A">Brand A</option>
-      <option value="Brand B">Brand B</option>
-      <option value="Brand C">Brand C</option>
+      <option value="Brand A">Ryzen</option>
+      <option value="Brand B">Intel</option>
+      <option value="Brand C">NVIDIA</option>
     </select>
 
     <label>Quantity:</label>
@@ -328,285 +570,60 @@
 
 
 
-  <script>
-    function showCheckout(){
-  if(cart.length === 0){
-    alert("Your cart is empty!");
-    return;
-  }
-  document.getElementById('checkoutSection').style.display = "block";
-}
-
-  </script>
+<script src="script.js"></script>
 
 
 <script>
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slideshow-container img");
+ function filterProducts() {
+  let category = document.getElementById("categoryFilter").value.toLowerCase();
+  let brand = document.getElementById("brandFilter").value.toLowerCase();
+  let price = document.getElementById("priceFilter").value;
+  let color = document.getElementById("colorFilter").value.toLowerCase();
 
-function showSlides() {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active");
-  });
-
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1; }
-
-  slides[slideIndex - 1].classList.add("active");
-}
-
-setInterval(showSlides, 3000);
-</script>
-
-
-
-<script>
-function openAllProducts() {
-  document.getElementById('allProductsModal').style.display = 'block';
-}
-
-function closeAllProducts() {
-  document.getElementById('allProductsModal').style.display = 'none';
-}
-
-function openCheckout(name, price) {
-  document.getElementById('checkoutProductName').innerText = name;
-  document.getElementById('checkoutProductPrice').innerText = `₱${price}`;
-  document.getElementById('checkoutQty').value = 1;
-  document.getElementById('checkoutTotal').innerText = price;
-  document.getElementById('checkoutModal').style.display = 'block';
-}
-
-function closeCheckout() {
-  document.getElementById('checkoutModal').style.display = 'none';
-}
-
-document.getElementById('checkoutQty').addEventListener('input', function() {
-  const price = parseFloat(document.getElementById('checkoutProductPrice').innerText.replace('₱',''));
-  const qty = parseInt(this.value);
-  document.getElementById('checkoutTotal').innerText = price * qty;
-});
-
-function placeOrder() {
-  alert(`Order placed for ${document.getElementById('checkoutProductName').innerText}`);
-  closeCheckout();
-}
-</script>
-  <script>
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    function logout() {
-      alert("✅ You have successfully logged out."); 
-      setTimeout(() => {
-        window.location.href = "index.html"; 
-      }, 500); 
-    }
-  </script>
-
-  <script>
-function openProduct(id) {
-  document.getElementById(id).style.display = 'flex';
-}
-
-function closeProduct(id) {
-  document.getElementById(id).style.display = 'none';
-}
-</script>
-<script>
-function submitOrder(event) {
-  event.preventDefault();
-  alert("✅ Order placed successfully!");
-
-  // close current modal
-  document.querySelectorAll(".product-modal").forEach(modal => {
-    modal.style.display = "none";
-  });
-}
-</script>
-
-<script>
-let currentProduct = {name: "", price: 0};
-
-function openCheckout(name, price) {
-  currentProduct = {name, price};
-  document.getElementById("checkoutProductName").textContent = name;
-  document.getElementById("checkoutProductPrice").textContent = "₱" + price;
-  document.getElementById("checkoutQty").value = 1;
-  document.getElementById("checkoutTotal").textContent = price;
-  document.getElementById("checkoutModal").style.display = "flex";
-}
-
-function closeCheckout() {
-  document.getElementById("checkoutModal").style.display = "none";
-}
-
-document.getElementById("checkoutQty").addEventListener("input", function() {
-  let qty = parseInt(this.value) || 1;
-  document.getElementById("checkoutTotal").textContent = currentProduct.price * qty;
-});
-
-function placeOrder() {
-  let brand = document.getElementById("checkoutBrand").value;
-  let qty = document.getElementById("checkoutQty").value;
-  let total = document.getElementById("checkoutTotal").textContent;
-
-  alert("✅ Order Placed!\n\n" +
-        "Product: " + currentProduct.name + "\n" +
-        "Brand: " + brand + "\n" +
-        "Quantity: " + qty + "\n" +
-        "Total: ₱" + total);
-
-  closeCheckout();
-}
-</script>
-
-<script>
-let cart = [];
-let total = 0;
-
-
-function addToCart(name, price, image = '', buttonEl = null) {
-  
-  if (buttonEl) {
-    flyToCartAnimation(buttonEl);
-  }
-
- 
-  cart.push({ name, price, image });
-  total += price;
-  updateCartUI();
-}
-
-// Fly to cart animation
-function flyToCartAnimation(buttonEl) {
-  const cartIcon = document.getElementById("cartIcon");
-  const img = buttonEl.closest(".clemente-villavicencio-product").querySelector("img");
-
-  if (!img || !cartIcon) return;
-
-  const imgClone = img.cloneNode(true);
-  const imgRect = img.getBoundingClientRect();
-  const cartRect = cartIcon.getBoundingClientRect();
-
-  imgClone.style.position = "fixed";
-  imgClone.style.top = imgRect.top + "px";
-  imgClone.style.left = imgRect.left + "px";
-  imgClone.style.width = imgRect.width + "px";
-  imgClone.style.height = imgRect.height + "px";
-  imgClone.style.transition = "all 0.8s ease-in-out";
-  imgClone.style.zIndex = "9999";
-  document.body.appendChild(imgClone);
-
-  setTimeout(() => {
-    imgClone.style.top = cartRect.top + "px";
-    imgClone.style.left = cartRect.left + "px";
-    imgClone.style.width = "30px";
-    imgClone.style.height = "30px";
-    imgClone.style.opacity = "0.5";
-  }, 50);
-
-  setTimeout(() => {
-    imgClone.remove();
-  }, 850);
-}
-
-
-function updateCartUI() {
-  const wrapper = document.getElementById('cartItemsWrapper');
-  wrapper.innerHTML = "";
-  cart.forEach((item, index) => {
-    const div = document.createElement('div');
-    div.className = "cartItem";
-    div.innerHTML = `
-      <div style="display:flex;align-items:center;gap:8px;">
-        ${item.image ? `<img src="${item.image}" style="width:40px;height:40px;object-fit:cover;">` : ""}
-        <span>${item.name} - ₱${item.price}</span>
-      </div>
-      <button onclick="removeFromCart(${index})">Cancel</button>
-    `;
-    wrapper.appendChild(div);
-  });
-  document.getElementById('cartCount').innerText = cart.length;
-  document.getElementById('cartTotal').innerText = total;
-}
-
-
-function removeFromCart(index) {
-  total -= cart[index].price;
-  cart.splice(index, 1);
-  updateCartUI();
-}
-
-
-function toggleCart() {
-  const modal = document.getElementById('cartModal');
-  modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-}
-function closeCartModal() {
-  document.getElementById('cartModal').style.display = 'none';
-}
-
-// Checkout
-document.getElementById('checkoutForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  if (cart.length === 0) { alert("Cart is empty!"); return; }
-  let name = document.getElementById('customerName').value;
-  let email = document.getElementById('customerEmail').value;
-  let address = document.getElementById('customerAddress').value;
-  let payment = document.getElementById('paymentMethod').value;
-  alert(`✅ Order Confirmed!\nCustomer: ${name}\nEmail: ${email}\nAddress: ${address}\nPayment: ${payment}\nTotal: ₱${total}`);
-  cart = []; total = 0; updateCartUI(); closeCartModal();
-});
-
-</script>
-
-
-
-<script>
-document.getElementById("productSearch").addEventListener("keyup", function () {
-  let input = this.value.toLowerCase();
   let products = document.querySelectorAll(".clemente-villavicencio-product");
-  let cartItems = document.getElementById("cartItems");
-  let found = false;
 
-  cartItems.innerHTML = ""; 
+  products.forEach(product => {
+    let pCategory = product.getAttribute("data-category").toLowerCase();
+    let pBrand = product.getAttribute("data-brand").toLowerCase();
+    let pPrice = parseInt(product.getAttribute("data-price"));
+    let pColor = product.getAttribute("data-color").toLowerCase();
 
-  products.forEach(function (product) {
-    let productName = product.querySelector("h4").textContent.toLowerCase();
+    let show = true;
 
-    if (input !== "" && productName.includes(input)) {
-      found = true;
+    // Category Filter
+    if (category && category !== pCategory) {
+      show = false;
+    }
+
+    // Brand Filter
+    if (brand && brand !== pBrand) {
+      show = false;
+    }
+
+    // Price Filter
+    if (price) {
+      if (price === "low" && pPrice > 5000) show = false;
+      if (price === "mid" && (pPrice < 5000 || pPrice > 15000)) show = false;
+      if (price === "high" && (pPrice < 15000 || pPrice > 30000)) show = false;
+      if (price === "premium" && (pPrice < 30000 || pPrice > 50000)) show = false;
+      if (price === "ultra" && pPrice < 50000) show = false;
+    }
+
+    // Color Filter
+    if (color && color !== pColor) {
+      show = false;
+    }
+
+    // Show or Hide
+    if (show) {
       product.style.display = "block";
-
-      // Add item to search modal
-      let li = document.createElement("li");
-      li.textContent = product.querySelector("h4").textContent + " - " +
-                       product.querySelector("p").textContent;
-      cartItems.appendChild(li);
-    } else if (input === "") {
-      product.style.display = "block"; 
     } else {
       product.style.display = "none";
     }
   });
-
- 
-  document.getElementById("searchModal").style.display =
-    (input !== "" && found) ? "block" : "none";
-});
-
-function closeSearch() {
-  document.getElementById("searchModal").style.display = "none";
 }
+
+
 </script>
-
-
-
-
-
-
-
-
 </body>
 </html>

@@ -86,6 +86,16 @@
   white-space: nowrap;
 }
 
+
+
+.clemente-villavicencio-a:hover {
+
+  color: #555;
+  border-bottom: 2px solid #555;
+  transform: scale(1.05); 
+
+}
+
 .clemente-villavicencio-a.active {
   border-bottom: 2px solid #000;
 }

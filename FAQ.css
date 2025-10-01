@@ -82,6 +82,17 @@
   white-space: nowrap;
 }
 
+<<<<<<< HEAD
+=======
+.clemente-villavicencio-a:hover {
+
+  color: #555;
+  border-bottom: 2px solid #555;
+  transform: scale(1.05); 
+
+}
+
+>>>>>>> 2ee6b4d ( updated css and html)
 .clemente-villavicencio-a.active {
   border-bottom: 2px solid #000;
 }
