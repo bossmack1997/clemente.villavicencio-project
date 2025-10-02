@@ -169,7 +169,6 @@ button{
   justify-content: center;
   align-items: center;
  
-
 }
 
 
@@ -838,6 +837,15 @@ button{
 .clemente-villavicencio-addtocart {
   background: white;
   color: black;
+}
+
+
+.clemente-villavicencio-a:hover {
+
+  color: #555;
+  border-bottom: 2px solid #555;
+  transform: scale(1.05); 
+
 }
 
 
