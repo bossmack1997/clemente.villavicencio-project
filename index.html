@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CS Tech Shop - Sign Up & Login</title>
-   <link rel="stylesheet" href="SignUp.css">
+  <link rel="stylesheet" href="SignUp.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -15,111 +16,99 @@
   </div>
 
 
-  <div id="register-form">
-    <h2 class="clemente-villavicencio-h2">Register</h2>
-    <div class="clemente-villavicencio-message" id="register-msg"></div>
-    <div class="clemente-villavicencio-form-group">
-      <label class="clemente-villavicencio-label" for="reg-fullname">Full Name</label>
-      <input class="clemente-villavicencio-input" type="text" id="reg-fullname" placeholder="Enter your full name">
-    </div>
-    <div class="clemente-villavicencio-form-group">
-      <label class="clemente-villavicencio-label" for="reg-email">Email</label>
-      <input class="clemente-villavicencio-input" type="email" id="reg-email" placeholder="Enter your email">
-    </div>
-    <div class="clemente-villavicencio-form-group">
-      <label class="clemente-villavicencio-label" for="reg-username">Username</label>
-      <input class="clemente-villavicencio-input" type="text" id="reg-username" placeholder="Choose a username">
-    </div>
-    <div class="clemente-villavicencio-form-group">
-      <label class="clemente-villavicencio-label" for="reg-password">Password</label>
-      <input class="clemente-villavicencio-input" type="password" id="reg-password" placeholder="Create a password">
-    </div>
-    <button class="clemente-villavicencio-button" onclick="register()">Register</button>
-    <div class="clemente-villavicencio-switch">Already have an account? <a onclick="showLogin()">Login here</a></div>
+ <div id="register-form">
+  <h2 class="clemente-villavicencio-h2">Register</h2>
+  <div class="clemente-villavicencio-message" id="register-msg"></div>
+
+  <div class="clemente-villavicencio-form-group">
+    <label class="clemente-villavicencio-label" for="reg-fullname">Full Name</label>
+    <input class="clemente-villavicencio-input" type="text" id="reg-fullname" placeholder="Enter your full name">
   </div>
 
- 
-  <div id="login-form" style="display: none;">
-    <h2 class="clemente-villavicencio-h2">Login</h2>
-    <div class="clemente-villavicencio-message" id="login-msg"></div>
-    <div class="clemente-villavicencio-form-group">
-      <label class="clemente-villavicencio-label" for="login-username">Username</label>
-      <input class="clemente-villavicencio-input" type="text" id="login-username" placeholder="Enter your username">
+  <div class="clemente-villavicencio-form-group">
+    <label class="clemente-villavicencio-label" for="reg-email">Email</label>
+    <input class="clemente-villavicencio-input" type="email" id="reg-email" placeholder="Enter your email">
+  </div>
+
+  <div class="clemente-villavicencio-form-group">
+    <label class="clemente-villavicencio-label" for="reg-username">Username</label>
+    <input class="clemente-villavicencio-input" type="text" id="reg-username" placeholder="Choose a username">
+  </div>
+
+  <div class="clemente-villavicencio-form-group">
+    <label class="clemente-villavicencio-label" for="reg-password">Password</label>
+    <input class="clemente-villavicencio-input" type="password" id="reg-password" placeholder="Create a password">
+    
+    
+    <div style="margin-top: 5px;">
+      <input type="checkbox" id="show-reg-password" onclick="toggleRegisterPassword()">
+      <label for="show-reg-password" style="font-size: 0.85rem; color:#bbb;">Show Password</label>
     </div>
-    <div class="clemente-villavicencio-form-group">
-      <label class="clemente-villavicencio-label" for="login-password">Password</label>
-      <input class="clemente-villavicencio-input" type="password" id="login-password" placeholder="Enter your password">
+  </div>
+
+  
+
+  <button class="clemente-villavicencio-button" onclick="register()">Register</button>
+  
+
+  <div class="clemente-villavicencio-switch">
+    Already have an account? <a onclick="showLogin()">Login here</a>
+  </div>
+</div>
+
+
+
+<div id="login-form" style="display: none;">
+  <h2 class="clemente-villavicencio-h2">Login</h2>
+  <div class="clemente-villavicencio-message" id="login-msg"></div>
+
+  <div class="clemente-villavicencio-form-group">
+    <label class="clemente-villavicencio-label" for="login-username">Username</label>
+    <input class="clemente-villavicencio-input" type="text" id="login-username" placeholder="Enter your username">
+  </div>
+
+  <div class="clemente-villavicencio-form-group">
+    <label class="clemente-villavicencio-label" for="login-password">Password</label>
+    <input class="clemente-villavicencio-input" type="password" id="login-password" placeholder="Enter your password">
+
+    
+    <div style="margin-top: 5px;">
+      <input type="checkbox" id="show-login-password" onclick="toggleLoginPassword()">
+      <label for="show-login-password" style="font-size: 0.85rem; color:#bbb;">Show Password</label>
     </div>
-    <button class="clemente-villavicencio-button" onclick="login()">Login</button>
-    <div class="clemente-villavicencio-switch">Don’t have an account? <a onclick="showRegister()">Register here</a></div>
+  </div>
+
+  <button class="clemente-villavicencio-button" onclick="login()">Login</button>
+  
+  
+
+  <div class="clemente-villavicencio-switch">
+    Don’t have an account? <a onclick="showRegister()">Register here</a>
   </div>
 </div>
 
 
 <script>
-  function showLogin() {
-    document.getElementById("register-form").style.display = "none";
-    document.getElementById("login-form").style.display = "block";
+  function toggleRegisterPassword() {
+    const pass = document.getElementById("reg-password");
+    pass.type = pass.type === "password" ? "text" : "password";
   }
 
-  function showRegister() {
-    document.getElementById("login-form").style.display = "none";
-    document.getElementById("register-form").style.display = "block";
-  }
-
-  function register() {
-    const fullname = document.getElementById("reg-fullname").value.trim();
-    const email = document.getElementById("reg-email").value.trim();
-    const username = document.getElementById("reg-username").value.trim();
-    const password = document.getElementById("reg-password").value.trim();
-    const msg = document.getElementById("register-msg");
-
-
-    if (!fullname || !email || !username || !password) {
-      msg.style.color = "red";
-      msg.textContent = "⚠ Please complete all fields before proceeding.";
-      return;
-    }
-
-    
-    localStorage.setItem("cs_fullname", fullname);
-    localStorage.setItem("cs_email", email);
-    localStorage.setItem("cs_username", username);
-    localStorage.setItem("cs_password", password);
-
-    msg.style.color = "green";
-    msg.textContent = "✅ Registration successful! Please login.";
-    setTimeout(showLogin, 1500);
-  }
-
-  function login() {
-    const username = document.getElementById("login-username").value.trim();
-    const password = document.getElementById("login-password").value.trim();
-    const msg = document.getElementById("login-msg");
-
-    const storedUser = localStorage.getItem("cs_username");
-    const storedPass = localStorage.getItem("cs_password");
-
-    if (!storedUser || !storedPass) {
-      msg.style.color = "red";
-      msg.textContent = "⚠ You must register first before logging in!";
-      return;
-    }
-
-    if (username === storedUser && password === storedPass) {
-      msg.style.color = "green";
-      msg.textContent = "Login successful! Redirecting...";
-      setTimeout(() => {
-        window.location.href = "Homepage.html"; 
-      }, 1500);
-    } else {
-      msg.style.color = "red";
-      msg.textContent = "❌ Invalid username or password!";
-    }
+  function toggleLoginPassword() {
+    const pass = document.getElementById("login-password");
+    pass.type = pass.type === "password" ? "text" : "password";
   }
 </script>
 
+
+
+  
+
 <script src="script.js"></script>
+
+
+</body>
+</html> 
 
 
 </body>

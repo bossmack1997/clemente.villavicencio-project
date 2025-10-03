@@ -1,3 +1,80 @@
+
+function toggleRegisterPassword() {
+  const passwordInput = document.getElementById("reg-password");
+  passwordInput.type = (passwordInput.type === "password") ? "text" : "password";
+}
+
+function toggleLoginPassword() {
+  const passwordInput = document.getElementById("login-password");
+  passwordInput.type = (passwordInput.type === "password") ? "text" : "password";
+}
+
+  function showLogin() {
+    document.getElementById("register-form").style.display = "none";
+    document.getElementById("login-form").style.display = "block";
+  }
+
+  function showRegister() {
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("register-form").style.display = "block";
+  }
+
+  function register() {
+    const fullname = document.getElementById("reg-fullname").value.trim();
+    const email = document.getElementById("reg-email").value.trim();
+    const username = document.getElementById("reg-username").value.trim();
+    const password = document.getElementById("reg-password").value.trim();
+    const msg = document.getElementById("register-msg");
+
+
+    if (!fullname || !email || !username || !password) {
+      msg.style.color = "red";
+      msg.textContent = "⚠ Please complete all fields before proceeding.";
+      return;
+    }
+
+    
+    localStorage.setItem("cs_fullname", fullname);
+    localStorage.setItem("cs_email", email);
+    localStorage.setItem("cs_username", username);
+    localStorage.setItem("cs_password", password);
+
+    msg.style.color = "green";
+    msg.textContent = "✅ Registration successful! Please login.";
+    setTimeout(showLogin, 1500);
+  }
+
+  function login() {
+    const username = document.getElementById("login-username").value.trim();
+    const password = document.getElementById("login-password").value.trim();
+    const msg = document.getElementById("login-msg");
+
+    const storedUser = localStorage.getItem("cs_username");
+    const storedPass = localStorage.getItem("cs_password");
+
+    if (!storedUser || !storedPass) {
+      msg.style.color = "red";
+      msg.textContent = "⚠ You must register first before logging in!";
+      return;
+    }
+
+    if (username === storedUser && password === storedPass) {
+      msg.style.color = "green";
+      msg.textContent = "Login successful! Redirecting...";
+      setTimeout(() => {
+        window.location.href = "Homepage.html"; 
+      }, 1500);
+    } else {
+      msg.style.color = "red";
+      msg.textContent = "❌ Invalid username or password!";
+    }
+  }
+
+ 
+ 
+ 
+ 
+ 
  function showLogin() {
     document.getElementById("register-form").style.display = "none";
     document.getElementById("login-form").style.display = "block";

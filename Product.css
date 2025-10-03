@@ -298,12 +298,8 @@ button{
   display:flex;
   justify-content: bottom;
   align-items: baseline;
-  
-
-  
   border: none;  
 
- 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  
   border-radius: 15px; 
 }
@@ -326,9 +322,6 @@ button{
 }
 
 
-
-
-
 .clemente-villavicencio-buttons button {
   padding: 10px 22px;
   border: 2px solid #000;
@@ -338,23 +331,15 @@ button{
   font-weight: bold;
   transition: 0.3s;
 }
-.clemente-villavicencio-btn{
-    background: #000;
-  color: #fff;
-}
-.clemente-villavicencio-btn:hover{
-  color: black;
-  background: white;
-}
-
 .clemente-villavicencio-cartbtn{
   background: white;
   color: black;
 }
 
 .clemente-villavicencio-cartbtn:hover {
-  background: black;
-  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+  background: linear-gradient(135deg, white, #444);
 }
 
 .clemente-villavicencio-btn-outline:hover {
@@ -735,8 +720,8 @@ button{
   color: black; 
 }
 .back-btn:hover{
-  color: white;
-  background: black;
+  color: black;
+  background: grey;
    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
 }
 
@@ -759,6 +744,7 @@ button{
   padding-top: 80px;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  background: #fff; /* optional, depende sa theme */
 }
 
 .clemente-villavicencio-product-card img {
@@ -766,6 +752,21 @@ button{
   height: 200px;     
   object-fit: cover;  
   border-radius: 10px 10px 0 0;
+  display: block;
+}
+
+.discount {
+  position: absolute;
+  top: 20px;
+  right: -35px; /* nakalabas konti sa gilid */
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 6px 40px;
+  transform: rotate(45deg); /* slanted effect */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  text-transform: uppercase;
 }
 
 
