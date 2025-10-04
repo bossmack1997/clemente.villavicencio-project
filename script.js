@@ -257,13 +257,13 @@ document.getElementById("checkoutQty").addEventListener("input", function() {
 });
 
 function placeOrder() {
-  let brand = document.getElementById("checkoutBrand").value;
+  let ModeOfPayment = document.getElementById("checkoutpaymentMethod").value;
   let qty = document.getElementById("checkoutQty").value;
   let total = document.getElementById("checkoutTotal").textContent;
 
   alert("✅ Order Placed!\n\n" +
         "Product: " + currentProduct.name + "\n" +
-        "Brand: " + brand + "\n" +
+        "Mode of Payment: " + ModeOfPayment + "\n" +
         "Quantity: " + qty + "\n" +
         "Total: ₱" + total);
 
